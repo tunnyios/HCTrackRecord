@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RM-ZQ-JeX" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubd-vC-myd">
+                                <rect key="frame" x="490" y="20" width="90" height="30"/>
+                                <color key="backgroundColor" red="0.49880647960000002" green="0.7893179655" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="停止轨迹记录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xyl-5s-b8Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBP-zU-cBd">
+                                <rect key="frame" x="255" y="20" width="90" height="30"/>
+                                <color key="backgroundColor" red="0.49880647960000002" green="0.7893179655" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="继续记录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueRecord" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A4P-S3-S03"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKh-iG-IPH">
+                                <rect key="frame" x="20" y="20" width="90" height="30"/>
+                                <color key="backgroundColor" red="0.49880647955457091" green="0.78931796553702283" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="开始轨迹记录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H0S-Yw-eva"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LBP-zU-cBd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="0wg-aE-aSX"/>
+                            <constraint firstItem="NKh-iG-IPH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="2gS-6I-jfd"/>
+                            <constraint firstAttribute="trailing" secondItem="1RM-ZQ-JeX" secondAttribute="trailing" id="8yy-P9-4QP"/>
+                            <constraint firstItem="Ubd-vC-myd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="FRb-1O-LGB"/>
+                            <constraint firstItem="Ubd-vC-myd" firstAttribute="width" secondItem="NKh-iG-IPH" secondAttribute="width" id="FcJ-fJ-vjb"/>
+                            <constraint firstAttribute="centerX" secondItem="LBP-zU-cBd" secondAttribute="centerX" id="HNe-zK-q8V"/>
+                            <constraint firstItem="1RM-ZQ-JeX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="VFR-n3-4bP"/>
+                            <constraint firstItem="NKh-iG-IPH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="Xnu-DK-uak"/>
+                            <constraint firstAttribute="bottom" secondItem="1RM-ZQ-JeX" secondAttribute="bottom" id="fXn-Ck-JxV"/>
+                            <constraint firstItem="1RM-ZQ-JeX" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ieX-ql-oHc"/>
+                            <constraint firstAttribute="trailing" secondItem="Ubd-vC-myd" secondAttribute="trailing" constant="20" id="jZL-5Z-15S"/>
+                            <constraint firstItem="Ubd-vC-myd" firstAttribute="height" secondItem="NKh-iG-IPH" secondAttribute="height" id="jjT-fq-Txf"/>
+                            <constraint firstItem="Ubd-vC-myd" firstAttribute="width" secondItem="LBP-zU-cBd" secondAttribute="width" id="ndl-bH-vb4"/>
+                            <constraint firstItem="Ubd-vC-myd" firstAttribute="height" secondItem="LBP-zU-cBd" secondAttribute="height" id="prb-PN-W56"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bmkMapView" destination="1RM-ZQ-JeX" id="Rg4-oa-oip"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
